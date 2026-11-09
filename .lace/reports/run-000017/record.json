@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "id": "run-000017",
+  "metadata": {
+    "timestamp": "2026-11-05T13:33:11Z",
+    "command": "lace synth --open",
+    "status": "succeeded",
+    "duration_ms": 557,
+    "lace_version": "0.9.0",
+    "project": "240ed1c2fcb0f463",
+    "project_name": "port_CycloneV_acc",
+    "bundle": "2026.10.13",
+    "platform": "windows-x64",
+    "top": "proctest_00",
+    "synthesis": {
+      "top": "proctest_00",
+      "component_version": "2026-09-29",
+      "sources": "3f9a8bf9c2c4de7e"
+    },
+    "simulation": null,
+    "environment": {
+      "hostname": "DESKTOP-84DOCI2",
+      "os": "windows",
+      "os_name": null,
+      "kernel": null,
+      "arch": "x86_64",
+      "cpu_model": null,
+      "cpus": 4,
+      "memory_bytes": null,
+      "fingerprint": "b063aef96663a5b4"
+    }
+  },
+  "synthesis": {
+    "tool": "Yosys 0.69+156 (git sha1 9d0c91b23-dirty, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+    "top": "proctest_00",
+    "modules": 15,
+    "wires": 296,
+    "wire_bits": 2377,
+    "public_wires": 212,
+    "public_wire_bits": 2062,
+    "memories": 3,
+    "memory_bits": 248,
+    "processes": 0,
+    "cells": 108,
+    "cell_types": [
+      {
+        "cell_type": "$eq",
+        "count": 60
+      },
+      {
+        "cell_type": "$mux",
+        "count": 24
+      },
+      {
+        "cell_type": "$dff",
+        "count": 10
+      },
+      {
+        "cell_type": "$add",
+        "count": 3
+      },
+      {
+        "cell_type": "$memrd",
+        "count": 3
+      },
+      {
+        "cell_type": "$memwr_v2",
+        "count": 3
+      },
+      {
+        "cell_type": "$pmux",
+        "count": 2
+      },
+      {
+        "cell_type": "$logic_not",
+        "count": 1
+      },
+      {
+        "cell_type": "$reduce_or",
+        "count": 1
+      },
+      {
+        "cell_type": "$sub",
+        "count": 1
+      }
+    ]
+  },
+  "simulation": null
+}

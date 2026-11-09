@@ -1,0 +1,78 @@
+================================================================================
+LACE OPERATION REPORT
+================================================================================
+
+OVERVIEW
+  Status               PASS
+  Command              lace sim
+  Report               run-000041
+  Total wall time      806 ms
+  Lace version         0.9.0
+  Started (UTC)        2026-11-05T13:47:04Z
+  Finished (UTC)       2026-11-05T13:47:05Z
+
+HOST ENVIRONMENT
+  Hostname             DESKTOP-84DOCI2
+  Operating system     windows
+  Kernel               not reported
+  Architecture         x86_64
+  CPU model            not reported
+  Logical CPUs         4 available
+  Memory               not reported
+  Host data is a snapshot collected when this report was written.
+
+EDA TOOLCHAIN
+  Bundle               2026.10.13 (windows-x64)
+  Location             C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain
+  Tool           Component                Executable
+  iverilog       icarus ucrt64-v1         C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin/iverilog.exe
+  vvp            icarus ucrt64-v1         C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin/vvp.exe
+
+PROJECT
+  Name                 port_CycloneV_acc
+  Root                 C:\Users\Aluno\Projetos\port_CycloneV_acc
+  Project file         C:\Users\Aluno\Projetos\port_CycloneV_acc\port_CycloneV_acc.spf
+  Top level            proc_placa.v (proc_placa)
+  Testbench            tb_proc_placa.v (tb_proc_placa)
+  Modules              13 registered
+      - proc_placa.v
+      - my_proc.v
+      - acumulador.v
+      - conta_apertos.v
+      - debounce.v
+      - decimal16_dabble.v
+      - dig7.v
+      - display5.v
+      - ula16s.v
+      - pc_counter.v
+      - rom.v
+      - processtest00.v
+      - and_gate.v
+  Testbenches          1 registered
+      - tb_proc_placa.v
+  Processors           0
+
+TIMING BREAKDOWN
+  Phases
+  PASS      Simulation tb_proc_placa (Icarus)                    599 ms
+  TOTAL     Lace operation                                       806 ms
+
+  Tool runs
+  PASS      elaborate: iverilog                                  198 ms
+  PASS      simulate: vvp                                        394 ms
+
+  Scope: monotonic wall time. Tool runs include process launch, wait and output drain.
+  Phase times also include Lace's preparation and artifact checks.
+  A single run is not a statistical benchmark; repeat under controlled load before publishing numbers.
+
+GENERIC SYNTHESIS STATISTICS
+  Status               NOT AVAILABLE
+  Reason               synthesis was not run
+
+ARTIFACTS
+  icarus_image           .lace\Temp\tb_proc_placa.vvp
+  waveform               tb_proc_placa.fst
+
+================================================================================
+Report file: .lace/reports/run-000041/report.txt
+Use repeated, controlled runs before treating these timings as a benchmark.

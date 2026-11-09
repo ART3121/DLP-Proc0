@@ -1,0 +1,15 @@
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/addr_dec.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/core.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/instr_dec.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/myDCFIFO.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/myFIFO.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/processor.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/yanc/SAPHO/ula.v"
+read_verilog -setattr src -I "C:/Users/Aluno/Projetos/port_CycloneV_acc" "C:/Users/Aluno/Projetos/port_CycloneV_acc/proctest_00/proctest_00/proctest_00.v"
+hierarchy -top proctest_00
+proc
+tee -q -o "C:/Users/Aluno/Projetos/port_CycloneV_acc/.lace/Temp/synth/proctest_00/check.log" check
+setundef -zero
+opt_clean -purge
+write_json "C:/Users/Aluno/Projetos/port_CycloneV_acc/.lace/Temp/synth/proctest_00/hierarchy.json"
+tee -q -o "C:/Users/Aluno/Projetos/port_CycloneV_acc/.lace/Temp/synth/proctest_00/stat.json" stat -json -top proctest_00

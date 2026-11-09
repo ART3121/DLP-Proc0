@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "projectName": "port_CycloneV_acc",
+    "createdAt": "2026-10-13T13:57:31.955Z",
+    "lastModified": "2026-11-09T16:35:09.278Z",
+    "computerName": "DESKTOP-84DOCI2",
+    "appVersion": "lace 0.7.0",
+    "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
+  },
+  "structure": {
+    "basePath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc",
+    "folders": [],
+    "processors": [],
+    "topLevelFile": "rtl/proc_placa.v",
+    "testbenchFile": "",
+    "synthesizableFiles": [
+      {
+        "name": "proc_placa.v",
+        "path": "rtl/proc_placa.v",
+        "isTopLevel": true
+      },
+      {
+        "name": "my_proc.v",
+        "path": "rtl/my_proc.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "acumulador.v",
+        "path": "rtl/acumulador.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "conta_apertos.v",
+        "path": "rtl/conta_apertos.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "debounce.v",
+        "path": "rtl/debounce.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "decimal16_dabble.v",
+        "path": "rtl/decimal16_dabble.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "dig7.v",
+        "path": "rtl/dig7.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "display5.v",
+        "path": "rtl/display5.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "ula16s.v",
+        "path": "rtl/ula16s.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "pc_counter.v",
+        "path": "rtl/pc_counter.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "rom.v",
+        "path": "rtl/rom.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "ram.v",
+        "path": "rtl/ram.v",
+        "isTopLevel": false
+      }
+    ],
+    "testbenchFiles": []
+  }
+}

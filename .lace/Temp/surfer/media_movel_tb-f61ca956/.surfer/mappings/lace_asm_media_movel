@@ -1,0 +1,12 @@
+Name = lace_asm_media_movel
+Bits = 23
+0 NOP
+1 LOD 10
+2 SET main_a
+3 LOD 100
+4 SET main_b
+5 LOD main_a
+6 ADD main_b
+7 SET main_c
+8 OUT 0
+9 JMP fim

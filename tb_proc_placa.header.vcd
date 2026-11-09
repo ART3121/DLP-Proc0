@@ -1,0 +1,23 @@
+$date
+	Thu Nov 05 12:39:24 2026
+
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_proc_placa $end
+$var wire 3 ! LEDR [2:0] $end
+$var wire 8 " LEDG [7:0] $end
+$var wire 7 # HEX3 [6:0] $end
+$var wire 7 $ HEX2 [6:0] $end
+$var wire 7 % HEX1 [6:0] $end
+$var wire 7 & HEX0 [6:0] $end
+$var reg 1 ' CLOCK_50 $end
+$var reg 2 ( KEY [1:0] $end
+$var integer 32 ) erros [31:0] $end
+$var integer 32 * k [31:0] $end
+$upscope $end
+$enddefinitions $end

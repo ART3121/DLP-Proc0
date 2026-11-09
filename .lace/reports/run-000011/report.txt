@@ -1,0 +1,101 @@
+================================================================================
+LACE OPERATION REPORT
+================================================================================
+
+OVERVIEW
+  Status               CANCELLED
+  Command              lace-studio sim --verilator --open
+  Report               run-000011
+  Total wall time      22.341 s (22341 ms)
+  Lace version         0.9.0
+  Started (UTC)        2026-11-05T13:06:37Z
+  Finished (UTC)       2026-11-05T13:07:00Z
+
+HOST ENVIRONMENT
+  Hostname             DESKTOP-84DOCI2
+  Operating system     windows
+  Kernel               not reported
+  Architecture         x86_64
+  CPU model            not reported
+  Logical CPUs         4 available
+  Memory               not reported
+  Host data is a snapshot collected when this report was written.
+
+EDA TOOLCHAIN
+  Bundle               2026.10.13 (windows-x64)
+  Location             C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain
+  Tool           Component                Executable
+  verilator      verilator ucrt64-v1      C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin/verilator
+  Verilator compiler   C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin\g++.exe (bundle)
+
+PROJECT
+  Name                 port_CycloneV_acc
+  Root                 C:\Users\Aluno\Projetos\port_CycloneV_acc
+  Project file         C:\Users\Aluno\Projetos\port_CycloneV_acc\port_CycloneV_acc.spf
+  Top level            acumulador.v (acumulador)
+  Testbench            tb_proc_placa.v (tb_proc_placa)
+  Modules              12 registered
+      - proc_placa.v
+      - my_proc.v
+      - acumulador.v
+      - conta_apertos.v
+      - debounce.v
+      - decimal16_dabble.v
+      - dig7.v
+      - display5.v
+      - ula16s.v
+      - pc_counter.v
+      - rom.v
+      - processtest00.v
+  Testbenches          1 registered
+      - tb_proc_placa.v
+  Processors           0
+
+TIMING BREAKDOWN
+  Phases
+  CANCELLED Simulation tb_proc_placa (Verilator)               22.341 s
+  TOTAL     Lace operation                                     22.341 s
+
+  Tool runs
+  CANCELLED verilate: verilator                                22.336 s
+
+  Scope: monotonic wall time. Tool runs include process launch, wait and output drain.
+  Phase times also include Lace's preparation and artifact checks.
+  A single run is not a statistical benchmark; repeat under controlled load before publishing numbers.
+
+GENERIC SYNTHESIS STATISTICS
+  Status               NOT AVAILABLE
+  Reason               synthesis was not run
+
+ARTIFACTS
+  verilated_model        .lace\Temp\obj_dir_tb_proc_placa\Vtb_proc_placa.exe  (missing)
+  waveform               tb_proc_placa.vcd  (left from an earlier run)
+
+FAILURE DIAGNOSTIC
+  Phase                Simulation tb_proc_placa (Verilator)
+  Status               CANCELLED
+  Step                 verilate: verilator (CANCELLED)
+  Last lines of its output:
+    C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/share/verilator/include/verilated.cpp:78:10: warning: 'STDOUT_FILENO' redefined
+       78 | # define STDOUT_FILENO _fileno(stdout)
+          |          ^~~~~~~~~~~~~
+    In file included from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/locale.h:12,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/c++/16.2.0/clocale:47,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++locale.h:41,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/c++/16.2.0/bits/localefwd.h:42,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/c++/16.2.0/string:48,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/share/verilator/include/verilatedos.h:653,
+                     from C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/share/verilator/include/verilated.cpp:51:
+    C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/stdio.h:56:9: note: this is the location of the previous definition
+       56 | #define STDOUT_FILENO   1
+          |         ^~~~~~~~~~~~~
+    C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/share/verilator/include/verilated.cpp:79:10: warning: 'STDERR_FILENO' redefined
+       79 | # define STDERR_FILENO _fileno(stderr)
+          |          ^~~~~~~~~~~~~
+    C:/Users/Aluno/AppData/Local/Programs/Lace/toolchain/msys/ucrt64/include/stdio.h:57:9: note: this is the location of the previous definition
+       57 | #define STDERR_FILENO   2
+          |         ^~~~~~~~~~~~~
+
+================================================================================
+Report file: .lace/reports/run-000011/report.txt
+Use repeated, controlled runs before treating these timings as a benchmark.

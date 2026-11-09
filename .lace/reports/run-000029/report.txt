@@ -1,0 +1,99 @@
+================================================================================
+LACE OPERATION REPORT
+================================================================================
+
+OVERVIEW
+  Status               PASS
+  Command              lace sim -p proctest_00 --fast
+  Report               run-000029
+  Total wall time      19.291 s (19291 ms)
+  Lace version         0.9.0
+  Started (UTC)        2026-11-05T13:42:24Z
+  Finished (UTC)       2026-11-05T13:42:43Z
+
+HOST ENVIRONMENT
+  Hostname             DESKTOP-84DOCI2
+  Operating system     windows
+  Kernel               not reported
+  Architecture         x86_64
+  CPU model            not reported
+  Logical CPUs         4 available
+  Memory               not reported
+  Host data is a snapshot collected when this report was written.
+
+EDA TOOLCHAIN
+  Bundle               2026.10.13 (windows-x64)
+  Location             C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain
+  Tool           Component                Executable
+  cmmcomp        yanc v7.1                C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\yanc\bin/cmmcomp.exe
+  asmcomp        yanc v7.1                C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\yanc\bin/asmcomp.exe
+  verilator      verilator ucrt64-v1      C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin/verilator
+  Verilator compiler   C:\Users\Aluno\AppData\Local\Programs\Lace\toolchain\msys\ucrt64/bin\g++.exe (bundle)
+
+PROJECT
+  Name                 port_CycloneV_acc
+  Root                 C:\Users\Aluno\Projetos\port_CycloneV_acc
+  Project file         C:\Users\Aluno\Projetos\port_CycloneV_acc\port_CycloneV_acc.spf
+  Top level            media_movel\media_movel\media_movel.v (media_movel)
+  Testbench            media_movel\media_movel\media_movel_tb.v (media_movel_tb)
+  Modules              15 registered
+      - proc_placa.v
+      - my_proc.v
+      - acumulador.v
+      - conta_apertos.v
+      - debounce.v
+      - decimal16_dabble.v
+      - dig7.v
+      - display5.v
+      - ula16s.v
+      - pc_counter.v
+      - rom.v
+      - processtest00.v
+      - and_gate.v
+      - proctest_00\proctest_00\proctest_00.v
+      - media_movel\media_movel\media_movel.v
+  Testbenches          3 registered
+      - tb_proc_placa.v
+      - proctest_00\proctest_00\proctest_00_tb.v
+      - media_movel\media_movel\media_movel_tb.v
+  Processors           2
+      - proctest_00 | C± | 100 MHz | 2000 clocks | proctest_00\proctest_00.cmm
+      - media_movel | C± | 100 MHz | 2000 clocks | media_movel\media_movel.cmm
+
+TIMING BREAKDOWN
+  Phases
+  PASS      Build proctest_00                                    115 ms
+  PASS      Fast simulation proctest_00_tb (Verilator)         18.758 s
+  TOTAL     Lace operation                                     19.291 s
+
+  Tool runs
+  PASS      compile: cmmcomp                                      57 ms
+  PASS      assemble: asmcomp                                     52 ms
+  PASS      verilate: verilator                                18.411 s
+  PASS      simulate: verilator                                  334 ms
+
+  Scope: monotonic wall time. Tool runs include process launch, wait and output drain.
+  Phase times also include Lace's preparation and artifact checks.
+  A single run is not a statistical benchmark; repeat under controlled load before publishing numbers.
+
+GENERIC SYNTHESIS STATISTICS
+  Status               NOT AVAILABLE
+  Reason               synthesis was not run
+
+ARTIFACTS
+  assembly               proctest_00\proctest_00\proctest_00.asm
+  verilog                proctest_00\proctest_00\proctest_00.v
+  data_memory            proctest_00\proctest_00\proctest_00_data.mif
+  instruction_memory     proctest_00\proctest_00\proctest_00_inst.mif
+  testbench              proctest_00\proctest_00\proctest_00_tb.v
+  program_counter_map    proctest_00\proctest_00\pc_proctest_00_mem.txt
+  source_translation     proctest_00\proctest_00\src_lines.txt
+  opcode_translation     proctest_00\proctest_00\trad_opcode.txt
+  compiler_log           proctest_00\proctest_00\prog_log.txt
+  pre_assembler_log      proctest_00\proctest_00\app_log.txt
+  verilated_model        .lace\Temp\proctest_00\obj_dir_fast_proctest_00_tb\Vproctest_00_tb.exe
+  simulation_output      proctest_00\proctest_00\output_0.txt
+
+================================================================================
+Report file: .lace/reports/run-000029/report.txt
+Use repeated, controlled runs before treating these timings as a benchmark.

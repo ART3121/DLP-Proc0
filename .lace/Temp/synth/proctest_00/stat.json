@@ -1,0 +1,305 @@
+{
+   "creator": "Yosys 0.69+156 (git sha1 9d0c91b23-dirty, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+   "invocation": "stat -json -top proctest_00 ",
+   "modules": {
+      "$paramod$18b476bc2e7a3327cdb10638224f54c7a4d40a54\\prefetch": {
+         "num_wires":         17,
+         "num_wire_bits":     48,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 44,
+         "num_ports":         16,
+         "num_port_bits":     44,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$eq": 1,
+            "$mux": 2
+         }
+      },
+      "$paramod$3b92b7329d3804e2114807dbd1970834e41579c2\\instr_fetch": {
+         "num_wires":         16,
+         "num_wire_bits":     41,
+         "num_pub_wires":     16,
+         "num_pub_wire_bits": 41,
+         "num_ports":         11,
+         "num_port_bits":     33,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$paramod$18b476bc2e7a3327cdb10638224f54c7a4d40a54\\prefetch": 1,
+            "$paramod\\pc\\NBITS=s32'00000000000000000000000000000100": 1
+         }
+      },
+      "$paramod$4164b08bdb30b373eb6ec4cf7380dc3fb647ff1c\\io_ctrl": {
+         "num_wires":         11,
+         "num_wire_bits":     12,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 10,
+         "num_ports":         9,
+         "num_port_bits":     10,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$dff": 2,
+            "$mux": 2
+         }
+      },
+      "$paramod$4aa8deef02f3abd0f736798e2f9693db1e576ceb\\instr_dec": {
+         "num_wires":         26,
+         "num_wire_bits":     107,
+         "num_pub_wires":     13,
+         "num_pub_wire_bits": 37,
+         "num_ports":         12,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         15,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$dff": 1,
+            "$eq": 8,
+            "$mux": 5,
+            "$pmux": 1
+         }
+      },
+      "$paramod$97a331e094634da9a0f848a569288de1672c172c\\mem_instr": {
+         "num_wires":         4,
+         "num_wire_bits":     27,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 16,
+         "num_ports":         3,
+         "num_port_bits":     16,
+         "num_memories":      1,
+         "num_memory_bits":   110,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$dff": 1,
+            "$memrd": 1,
+            "$memwr_v2": 1
+         }
+      },
+      "$paramod$a84ee16610ae8e0e81487c9fdbcfe1279aadad29\\processor": {
+         "num_wires":         22,
+         "num_wire_bits":     147,
+         "num_pub_wires":     22,
+         "num_pub_wire_bits": 147,
+         "num_ports":         16,
+         "num_port_bits":     104,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       3,
+         "num_cells_by_type": {
+            "$paramod$97a331e094634da9a0f848a569288de1672c172c\\mem_instr": 1,
+            "$paramod$af526ba6ac00d62d56a51c16f8cd656bea17a4be\\core": 1,
+            "$paramod$b97345fd4f090e083e965785095647d38a89d909\\mem_data": 1
+         }
+      },
+      "$paramod$af526ba6ac00d62d56a51c16f8cd656bea17a4be\\core": {
+         "num_wires":         37,
+         "num_wire_bits":     264,
+         "num_pub_wires":     36,
+         "num_pub_wire_bits": 241,
+         "num_ports":         22,
+         "num_port_bits":     147,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         3,
+         "num_submodules":       6,
+         "num_cells_by_type": {
+            "$dff": 1,
+            "$mux": 1,
+            "$reduce_or": 1,
+            "$paramod$3b92b7329d3804e2114807dbd1970834e41579c2\\instr_fetch": 1,
+            "$paramod$4164b08bdb30b373eb6ec4cf7380dc3fb647ff1c\\io_ctrl": 1,
+            "$paramod$4aa8deef02f3abd0f736798e2f9693db1e576ceb\\instr_dec": 1,
+            "$paramod$b2ecc156c5faafb85728f1d902144c3a29a90f86\\stack": 1,
+            "$paramod$b81c78d8a5ee8dc7f4550c055c1144c04f535f1f\\ula": 1,
+            "$paramod$dcd7e918bc9b30659d64e30e976f9046d1f0f7c9\\ula_in1_ctrl": 1
+         }
+      },
+      "$paramod$b2ecc156c5faafb85728f1d902144c3a29a90f86\\stack": {
+         "num_wires":         15,
+         "num_wire_bits":     103,
+         "num_pub_wires":     9,
+         "num_pub_wire_bits": 53,
+         "num_ports":         6,
+         "num_port_bits":     50,
+         "num_memories":      1,
+         "num_memory_bits":   46,
+         "num_processes":     0,
+         "num_cells":         11,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$memrd": 1,
+            "$memwr_v2": 1,
+            "$mux": 6,
+            "$sub": 1
+         }
+      },
+      "$paramod$b81c78d8a5ee8dc7f4550c055c1144c04f535f1f\\ula": {
+         "num_wires":         6,
+         "num_wire_bits":     99,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 99,
+         "num_ports":         5,
+         "num_port_bits":     76,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       2,
+         "num_cells_by_type": {
+            "$paramod\\ula_add\\NUBITS=s32'00000000000000000000000000010111": 1,
+            "$paramod\\ula_mux\\NUBITS=s32'00000000000000000000000000010111": 1
+         }
+      },
+      "$paramod$b97345fd4f090e083e965785095647d38a89d909\\mem_data": {
+         "num_wires":         10,
+         "num_wire_bits":     123,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 52,
+         "num_ports":         6,
+         "num_port_bits":     52,
+         "num_memories":      1,
+         "num_memory_bits":   92,
+         "num_processes":     0,
+         "num_cells":         6,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$dff": 1,
+            "$memrd": 1,
+            "$memwr_v2": 1,
+            "$mux": 3
+         }
+      },
+      "$paramod$dcd7e918bc9b30659d64e30e976f9046d1f0f7c9\\ula_in1_ctrl": {
+         "num_wires":         10,
+         "num_wire_bits":     120,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 96,
+         "num_ports":         6,
+         "num_port_bits":     72,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         5,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$dff": 2,
+            "$mux": 3
+         }
+      },
+      "$paramod\\pc\\NBITS=s32'00000000000000000000000000000100": {
+         "num_wires":         8,
+         "num_wire_bits":     23,
+         "num_pub_wires":     6,
+         "num_pub_wire_bits": 15,
+         "num_ports":         5,
+         "num_port_bits":     11,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1,
+            "$dff": 1,
+            "$mux": 2
+         }
+      },
+      "$paramod\\ula_add\\NUBITS=s32'00000000000000000000000000010111": {
+         "num_wires":         3,
+         "num_wire_bits":     69,
+         "num_pub_wires":     3,
+         "num_pub_wire_bits": 69,
+         "num_ports":         3,
+         "num_port_bits":     69,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         1,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$add": 1
+         }
+      },
+      "$paramod\\ula_mux\\NUBITS=s32'00000000000000000000000000010111": {
+         "num_wires":         99,
+         "num_wire_bits":     1116,
+         "num_pub_wires":     47,
+         "num_pub_wire_bits": 1064,
+         "num_ports":         47,
+         "num_port_bits":     1064,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         53,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$eq": 51,
+            "$logic_not": 1,
+            "$pmux": 1
+         }
+      },
+      "\\proctest_00": {
+         "num_wires":         12,
+         "num_wire_bits":     78,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 78,
+         "num_ports":         4,
+         "num_port_bits":     26,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         0,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "$paramod$a84ee16610ae8e0e81487c9fdbcfe1279aadad29\\processor": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         296,
+         "num_wire_bits":     2377,
+         "num_pub_wires":     212,
+         "num_pub_wire_bits": 2062,
+         "num_ports":         171,
+         "num_port_bits":     1797,
+         "num_memories":      3,
+         "num_memory_bits":   248,
+         "num_processes":     0,
+         "num_cells":         108,
+         "num_submodules":       1,
+         "num_cells_by_type": {
+            "$add": 3,
+            "$dff": 10,
+            "$eq": 60,
+            "$logic_not": 1,
+            "$memrd": 3,
+            "$memwr_v2": 3,
+            "$mux": 24,
+            "$pmux": 2,
+            "$reduce_or": 1,
+            "$sub": 1,
+            "$paramod$a84ee16610ae8e0e81487c9fdbcfe1279aadad29\\processor": 1
+         }
+      }
+}
+

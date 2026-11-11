@@ -2,7 +2,7 @@
   "metadata": {
     "projectName": "port_CycloneV_acc",
     "createdAt": "2026-10-13T13:57:31.955Z",
-    "lastModified": "2026-11-09T16:35:09.278Z",
+    "lastModified": "2026-11-10T18:54:48.825Z",
     "computerName": "DESKTOP-84DOCI2",
     "appVersion": "lace 0.7.0",
     "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
@@ -12,7 +12,7 @@
     "folders": [],
     "processors": [],
     "topLevelFile": "rtl/proc_placa.v",
-    "testbenchFile": "",
+    "testbenchFile": "proc_placa_tb.v",
     "synthesizableFiles": [
       {
         "name": "proc_placa.v",
@@ -75,6 +75,12 @@
         "isTopLevel": false
       }
     ],
-    "testbenchFiles": []
+    "testbenchFiles": [
+      {
+        "name": "proc_placa_tb.v",
+        "path": "proc_placa_tb.v",
+        "isTopLevel": true
+      }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "board": "de2-115",
-  "top": "proc_placa",
+  "top": "proc_DE2_115",
   "connect": {
     "CLOCK_50": "CLOCK_50",
     "KEY": "KEY[1:0]",

@@ -10,7 +10,7 @@ module display5 (
     wire [15:0] m = neg ? -n : n;        // o modulo: -32768 vira 32768
     wire [3:0]  d0, d1, d2, d3, d4;
 
-    decimal16_dabble quebra (.m(m), .d0(d0), .d1(d1), .d2(d2), .d3(d3), .d4(d4));
+    decimal16_dabble u_dabble (.m(m), .d0(d0), .d1(d1), .d2(d2), .d3(d3), .d4(d4));
 
     dig7 u0 (.d(d0), .seg(HEX0));
     dig7 u1 (.d(d1), .seg(HEX1));

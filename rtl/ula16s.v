@@ -1,12 +1,9 @@
-// A ULA de 16 bits COM SINAL (complemento a dois).
-//
-// Daqui para a frente, esta e a nossa ULA.
-//
-// E a mesma ULA da aula passada com uma palavra a mais em cada barramento:
-// 'signed'. Os circuitos de soma, subtracao e multiplicacao sao os mesmos;
-// o que muda e a divisao -- e a forma de LER os 16 bits.
-//
-// Faixa: -32768 ... 32767.
+`define ADD                     3'b000
+`define SUB                     3'b001
+`define MUL                     3'b010
+`define DIV                     3'b011 
+`define LOAD                    3'b100
+
 module ula16s (
     input      signed [15:0] acc_out,
     input      signed [15:0] sram_out,
@@ -18,11 +15,11 @@ module ula16s (
 
     always @(*) begin
         case (op)
-            3'b001:  r = a - b;
-            3'b010:  r = a * b;
-            3'b000:  r = a + b;
-            3'b011:  r = a / b;
-            3'b100:  r = b;
+            `ADD :   r = a + b;
+            `SUB :   r = a - b;
+            `MUL :   r = a * b;
+            `DIV :   r = a / b;
+            `LOAD:   r = b;
             default: r = a;
         endcase
     end

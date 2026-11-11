@@ -2,7 +2,7 @@
   "metadata": {
     "projectName": "port_CycloneV_acc",
     "createdAt": "2026-10-13T13:57:31.955Z",
-    "lastModified": "2026-11-11T16:47:33.327Z",
+    "lastModified": "2026-11-11T17:07:51.931Z",
     "computerName": "DESKTOP-84DOCI2",
     "appVersion": "lace 0.7.0",
     "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
@@ -12,7 +12,7 @@
     "folders": [],
     "processors": [],
     "topLevelFile": "rtl/proc_DE2_115.v",
-    "testbenchFile": "proc_placa_tb.v",
+    "testbenchFile": "",
     "synthesizableFiles": [
       {
         "name": "proc_DE2_115.v",
@@ -27,11 +27,6 @@
       {
         "name": "acumulador.v",
         "path": "rtl/acumulador.v",
-        "isTopLevel": false
-      },
-      {
-        "name": "conta_apertos.v",
-        "path": "rtl/conta_apertos.v",
         "isTopLevel": false
       },
       {
@@ -75,12 +70,6 @@
         "isTopLevel": false
       }
     ],
-    "testbenchFiles": [
-      {
-        "name": "proc_placa_tb.v",
-        "path": "proc_placa_tb.v",
-        "isTopLevel": true
-      }
-    ]
+    "testbenchFiles": []
   }
 }

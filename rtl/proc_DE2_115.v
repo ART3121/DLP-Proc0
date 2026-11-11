@@ -45,9 +45,6 @@ module proc_DE2_115 #(parameter N = 20) (
     wire [3:0] unidade = (pc >= 4'd10) ? pc - 4'd10:pc;
     wire [3:0] dezena = (pc >= 4'd10) ? 4'd1:4'd0;
     dig7 d7 (.d(dezena),  .seg(HEX7));
-    
     dig7 d6 (.d(unidade), .seg(HEX6));
-
-
 
 endmodule

@@ -1,6 +1,6 @@
 // Anti-trepidacao para um botao KEY do DE2-115 (apertado = 0).
 //
-// A saida 'estavel' e o nivel do botao ja limpo: 1 enquanto esta apertado. A
+// A saida 'stb_clk' e o nivel do botao ja limpo: 1 enquanto esta apertado. A
 // borda de subida dele acontece UMA vez por aperto, e por isso ele pode ser o
 // clock de um circuito que anda um passo por aperto.
 //
@@ -12,7 +12,7 @@
 module debounce #(parameter N = 20) (
     input      clk,          // CLOCK_50
     input      key_n,        // KEY, ativo em 0
-    output reg estavel       // o nivel limpo: 1 enquanto o botao esta apertado
+    output reg stb_clk       // o nivel limpo: 1 enquanto o botao esta apertado
 );
 
     // 1. sincronizador
@@ -25,16 +25,16 @@ module debounce #(parameter N = 20) (
     // 2. filtro: conta enquanto a entrada for diferente do nivel aceito
     reg [N-1:0] cont;
     initial begin
-        estavel = 1'b0;
+        stb_clk = 1'b0;
         cont    = 0;
     end
     always @(posedge clk) begin
-        if (s1 == estavel)
+        if (s1 == stb_clk)
             cont <= 0;                   // nada mudou, ou foi so uma trepidacao
         else begin
             cont <= cont + 1'b1;
             if (&cont)                   // 2^N ciclos seguidos no nivel novo
-                estavel <= s1;
+                stb_clk <= s1;
         end
     end
 

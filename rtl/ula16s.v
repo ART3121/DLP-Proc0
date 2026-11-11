@@ -3,6 +3,7 @@
 `define MUL                     3'b010
 `define DIV                     3'b011 
 `define LOAD                    3'b100
+`define NOP                     3'b101
 
 module ula16s (
     input      signed [15:0] acc_out,
@@ -20,6 +21,7 @@ module ula16s (
             `MUL :   r = a * b;
             `DIV :   r = a / b;
             `LOAD:   r = b;
+            `NOP :   r = a;
             default: r = a;
         endcase
     end

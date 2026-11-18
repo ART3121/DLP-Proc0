@@ -2,13 +2,13 @@
   "metadata": {
     "projectName": "port_CycloneV_acc",
     "createdAt": "2026-10-13T13:57:31.955Z",
-    "lastModified": "2026-11-11T17:07:51.931Z",
+    "lastModified": "2026-11-18T12:34:20.814Z",
     "computerName": "DESKTOP-84DOCI2",
     "appVersion": "lace 0.7.0",
-    "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
+    "projectPath": "/home/aaraujo/Projetos/DLP-Proc0"
   },
   "structure": {
-    "basePath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc",
+    "basePath": "/home/aaraujo/Projetos/DLP-Proc0",
     "folders": [],
     "processors": [],
     "topLevelFile": "rtl/proc_DE2_115.v",
@@ -55,11 +55,6 @@
         "isTopLevel": false
       },
       {
-        "name": "pc_counter.v",
-        "path": "rtl/pc_counter.v",
-        "isTopLevel": false
-      },
-      {
         "name": "rom.v",
         "path": "rtl/rom.v",
         "isTopLevel": false
@@ -67,6 +62,11 @@
       {
         "name": "ram.v",
         "path": "rtl/ram.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "pc_counter2.v",
+        "path": "rtl/pc_counter2.v",
         "isTopLevel": false
       }
     ],

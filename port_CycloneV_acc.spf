@@ -2,13 +2,13 @@
   "metadata": {
     "projectName": "port_CycloneV_acc",
     "createdAt": "2026-10-13T13:57:31.955Z",
-    "lastModified": "2026-11-18T12:34:20.814Z",
+    "lastModified": "2026-11-18T13:36:41.022Z",
     "computerName": "DESKTOP-84DOCI2",
     "appVersion": "lace 0.7.0",
-    "projectPath": "/home/aaraujo/Projetos/DLP-Proc0"
+    "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
   },
   "structure": {
-    "basePath": "/home/aaraujo/Projetos/DLP-Proc0",
+    "basePath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc",
     "folders": [],
     "processors": [],
     "topLevelFile": "rtl/proc_DE2_115.v",

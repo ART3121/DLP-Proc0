@@ -4,7 +4,7 @@ module rom(
 );
 
     reg [8:0] mem [0:15];
-    initial $readmemb("program/soma.txt",mem);
+    initial $readmemb("program/programa.txt",mem);
     assign data = mem[addr];
 
 endmodule

@@ -6,7 +6,7 @@ module ram (
 );
     reg [15:0] mem [0:15];
 
-    initial $readmemb("program/dados.txt",mem);
+    initial $readmemb("program/ram.txt",mem);
     always@(posedge clk) begin
         if(we) mem[addr] <= data_in;
     end

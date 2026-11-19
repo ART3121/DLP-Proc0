@@ -1,0 +1,3 @@
+LOD 0
+ADD 0
+JMP 1

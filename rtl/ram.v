@@ -1,8 +1,8 @@
 module ram (
-    input              clk,we,
-    input        [3:0] addr,
-    input       [15:0] data_in,
-    output      [15:0] data_out
+    input          clk,we,
+    input    [3:0] addr,
+    input   [15:0] data_in,
+    output  [15:0] data_out
 );
     reg [15:0] mem [0:15];
 

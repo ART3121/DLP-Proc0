@@ -1,10 +1,3 @@
-`define ADD                     3'b000
-`define SUB                     3'b001
-`define MUL                     3'b010
-`define DIV                     3'b011 
-`define LOAD                    3'b100
-`define NOP                     3'b101
-
 module ula16s (
     input      signed [15:0] acc_out,
     input      signed [15:0] sram_out,
@@ -16,12 +9,12 @@ module ula16s (
 
     always @(*) begin
         case (op)
-            `ADD :   r = a + b;
-            `SUB :   r = a - b;
-            `MUL :   r = a * b;
-            `DIV :   r = a / b;
-            `LOAD:   r = b;
-            `NOP :   r = a;
+            3'b000:  r = a + b; // ADD
+            3'b001:  r = a - b; // SUB
+            3'b010:  r = a * b; // MUL
+            3'b011:  r = a / b; // DIV
+            3'b100:  r = b;     // LOAD
+            3'b101:  r = a;     // NOP
             default: r = a;
         endcase
     end

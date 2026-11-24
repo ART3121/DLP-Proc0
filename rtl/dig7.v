@@ -1,5 +1,9 @@
 // um digito BCD (0 a 9) para os 7 segmentos do DE2-115 (acende com 0)
-module dig7 (input [3:0] d, output reg [6:0] seg);
+module dig7 (
+    input       [3:0] d,
+     output reg [6:0] seg
+);
+
     always @(*) begin
         case (d)
             4'd0: seg = 7'b1000000;  4'd1: seg = 7'b1111001;

@@ -1,6 +1,6 @@
 module rom(
-    input  [3:0] addr,
-    output [7:0] data
+    input   [3:0] addr,
+    output  [7:0] data
 );
 
     reg [7:0] mem [0:15];

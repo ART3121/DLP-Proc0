@@ -4,7 +4,11 @@
 // logicos no circuito inteiro, contra 1135 com / e %.
 // O "for" nao e um laco que roda no tempo: o sintetizador o desenrola em 16
 // copias do mesmo pedaco de circuito, uma para cada bit.
-module decimal16_dabble (input [15:0] m, output [3:0] d0, d1, d2, d3, d4);
+module decimal16_dabble (
+    input [15:0] m,
+    output [3:0] d0, d1, d2, d3, d4
+);
+
     reg [19:0] bcd;
     integer i;
     always @(*) begin

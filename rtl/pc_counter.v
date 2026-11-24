@@ -1,6 +1,6 @@
 module pc_counter(
-    input clk, rst, load,
-    input   [3:0] target,
+    input             clk, rst, load,
+    input       [3:0] target,
     output  reg [3:0] addr
 );
 

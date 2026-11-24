@@ -8,11 +8,13 @@ Comentarios comecam com ';', '#' ou '//'. Linhas em branco sao ignoradas.
     ADD 0      ; acc = acc + mem[0]
     JMP 1      ; volta para a linha 1
 
-Cada instrucao vira uma palavra de 9 bits: opcode (5 bits) + addr (4 bits).
+Cada instrucao vira uma palavra de 8 bits: opcode (4 bits) + addr (4 bits).
+O opcode e decodificado em hardware por rtl/instr_dec.v, que gera
+op_ula, we (escrita na RAM) e ld (carga do PC).
 
-    ADD 00000   SUB 00001   MLT 00010   DIV 00011   LOD 00100
-    NOP 00101   SET 01101   JMP 10101
-    HLT         = JMP para a propria linha (sem addr)
+    ADD 0000   SUB 0001   MLT 0010   DIV 0011   LOD 0100
+    NOP 0101   SET 0110   JMP 0111   HLT 1000
+    HLT         = salto para a propria linha (sem addr)
     NOP         sem addr (sai 0000)
 
 A ROM tem 16 linhas: o que sobrar e preenchido com NOP.
@@ -27,16 +29,17 @@ import re
 import sys
 from pathlib import Path
 
+# Tem que bater com o case de rtl/instr_dec.v
 OPCODES = {
-    "ADD": "00000",
-    "SUB": "00001",
-    "MLT": "00010",
-    "DIV": "00011",
-    "LOD": "00100",
-    "NOP": "00101",
-    "SET": "01101",
-    "JMP": "10101",
-    "HLT": "10101",
+    "ADD": "0000",
+    "SUB": "0001",
+    "MLT": "0010",
+    "DIV": "0011",
+    "LOD": "0100",
+    "NOP": "0101",
+    "SET": "0110",
+    "JMP": "0111",
+    "HLT": "1000",
 }
 SEM_ADDR = {"NOP", "HLT"}      # nao recebem addr
 LINHAS_ROM = 16
@@ -64,7 +67,7 @@ def tira_comentario(linha):
 
 
 def monta(texto, nome="entrada"):
-    """Devolve a lista de (palavra de 9 bits, texto da instrucao, descricao)."""
+    """Devolve a lista de (palavra de 8 bits, texto da instrucao, descricao)."""
     saida = []
     erros = []
     for num, linha in enumerate(texto.splitlines(), start=1):
@@ -120,9 +123,9 @@ def monta(texto, nome="entrada"):
 def formata(instrucoes, origem):
     linhas = [
         f"// Gerado por montador.py a partir de {origem}. Nao edite: edite o .asm.",
-        "// Uma instrucao por linha, 9 bits: jmp | wr | op (3 bits) | addr (4 bits).",
+        "// Uma instrucao por linha, 8 bits: opcode (4 bits) | addr (4 bits).",
         "//",
-        "//jmp wr op addr     linha  instrucao  o que faz",
+        "//op addr    linha  instrucao  o que faz",
     ]
     for pc, (palavra, instr, desc) in enumerate(instrucoes):
         linhas.append(f"{palavra}   // {pc:<5d} {instr:<10s} {desc}")
@@ -130,7 +133,7 @@ def formata(instrucoes, origem):
 
 
 def main():
-    p = argparse.ArgumentParser(description="Monta um .asm no programa.txt da ROM (9 bits por linha).")
+    p = argparse.ArgumentParser(description="Monta um .asm no programa.txt da ROM (8 bits por linha).")
     p.add_argument("entrada", type=Path, help="arquivo .asm ou .txt")
     p.add_argument("-o", "--saida", type=Path,
                    help="arquivo de saida (padrao: programa.txt na pasta da entrada)")

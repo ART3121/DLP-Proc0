@@ -11,7 +11,7 @@ module proc_DE2_115 #(parameter N = 20) (
     wire stb_clk;
     wire signed [15:0] acc_out;
     wire neg;
-    wire [8:0] instr;
+    wire [7:0] instr;
 
 // Assings
     assign LEDG = {neg, 6'b0, stb_clk};

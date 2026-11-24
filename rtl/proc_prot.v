@@ -2,22 +2,30 @@ module proc_prot (
     input                    clk,
     input                    rst,
     output     signed [15:0] acc_out,
-    output            [ 8:0] instr,
+    output             [7:0] instr,
     output             [3:0] addr_rom
  );
 
 // Wires
     wire        [15:0] sram_out;
     wire signed [15:0] rslt;
-    wire         [8:0] data_rom;
+    wire         [7:0] data_rom;
 
 //  Instruction Splitter 
-    wire        load_pc     = data_rom [8];
     wire  [3:0] addr_ram    = data_rom [3:0];
-    wire  [2:0] opcode_alu  = data_rom [6:4];  
-    wire        we_ram      = data_rom [7];
+    wire  [3:0] opcode      = data_rom [7:4];
+    wire        load_pc;     
+    wire  [2:0] opcode_alu;   
+    wire        we_ram;      
 
 // Instances
+    instr_dec u_dec(
+        .opcode(opcode),
+        .op_ula(opcode_alu),
+        .we(we_ram),
+        .ld(load_pc)
+    );
+
     ram u_ram(
         .clk(clk),
         .we(we_ram),
@@ -31,13 +39,13 @@ module proc_prot (
         .data(data_rom)
     );
 
-    pc_counter2 PC (
+    pc_counter PC (
         .clk(clk),
         .rst(rst),
         .addr(addr_rom),
         .target(addr_ram),
         .load(load_pc)
-        );
+    );
 
     ula16s ula0 (
         .acc_out(acc_out), 

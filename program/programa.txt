@@ -1,20 +1,20 @@
 // Gerado por montador.py a partir de soma.asm. Nao edite: edite o .asm.
-// Uma instrucao por linha, 9 bits: jmp | wr | op (3 bits) | addr (4 bits).
+// Uma instrucao por linha, 8 bits: opcode (4 bits) | addr (4 bits).
 //
-//jmp wr op addr     linha  instrucao  o que faz
-001000000   // 0     LOD 0      acc = mem[0]
-000000000   // 1     ADD 0      acc = acc + mem[0]
-101010001   // 2     JMP 1      pc = 1
-001010000   // 3     NOP        (preenchimento)
-001010000   // 4     NOP        (preenchimento)
-001010000   // 5     NOP        (preenchimento)
-001010000   // 6     NOP        (preenchimento)
-001010000   // 7     NOP        (preenchimento)
-001010000   // 8     NOP        (preenchimento)
-001010000   // 9     NOP        (preenchimento)
-001010000   // 10    NOP        (preenchimento)
-001010000   // 11    NOP        (preenchimento)
-001010000   // 12    NOP        (preenchimento)
-001010000   // 13    NOP        (preenchimento)
-001010000   // 14    NOP        (preenchimento)
-001010000   // 15    NOP        (preenchimento)
+//op addr    linha  instrucao  o que faz
+01000000   // 0     LOD 0      acc = mem[0]
+00000000   // 1     ADD 0      acc = acc + mem[0]
+01110001   // 2     JMP 1      pc = 1
+01010000   // 3     NOP        (preenchimento)
+01010000   // 4     NOP        (preenchimento)
+01010000   // 5     NOP        (preenchimento)
+01010000   // 6     NOP        (preenchimento)
+01010000   // 7     NOP        (preenchimento)
+01010000   // 8     NOP        (preenchimento)
+01010000   // 9     NOP        (preenchimento)
+01010000   // 10    NOP        (preenchimento)
+01010000   // 11    NOP        (preenchimento)
+01010000   // 12    NOP        (preenchimento)
+01010000   // 13    NOP        (preenchimento)
+01010000   // 14    NOP        (preenchimento)
+01010000   // 15    NOP        (preenchimento)

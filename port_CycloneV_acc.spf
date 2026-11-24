@@ -2,7 +2,7 @@
   "metadata": {
     "projectName": "port_CycloneV_acc",
     "createdAt": "2026-10-13T13:57:31.955Z",
-    "lastModified": "2026-11-18T15:13:34.881Z",
+    "lastModified": "2026-11-24T19:44:29.629Z",
     "computerName": "DESKTOP-84DOCI2",
     "appVersion": "lace 0.7.0",
     "projectPath": "C:\\Users\\Aluno\\Projetos\\port_CycloneV_acc"
@@ -22,6 +22,11 @@
       {
         "name": "proc_prot.v",
         "path": "rtl/proc_prot.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "instr_dec.v",
+        "path": "rtl/instr_dec.v",
         "isTopLevel": false
       },
       {
